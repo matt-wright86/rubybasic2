@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+  </head>
+
+  <body>
+    <h1>We made a total of $<%= amount %> this week</h1>
+
+    <div class="bender">
+  <img src="http://vignette2.wikia.nocookie.net/bionicle/images/c/cd/Bender_dancing_animated.gif/revision/latest?cb=20080426120339">
+  </div>
+
+  <div class ="container">
+
+  <div class="t1">
+    <table border ="1">
+      <thead>
+        <tr>
+          <th> Destination</th>
+          <th>Shipment</th>
+          <th>Crates</th>
+          <th>Money (per planet)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% requires.each do |shipments, driver_name| %>
+
+
+
+          <tr>
+            <td> <%= shipments ["Destination"] %> </td>
+            <td> <%= shipments ["Shipment"]%> </td>
+            <td><%= shipments ["Crates"]%></td>
+            <td><%= shipments ["Money"]%></td>
+          </tr>
+
+
+<% end %>
+
+      </tbody>
+    </table>
+</div>
+
+
+<div class="t2">
+
+    <table border ="1">
+      <thead>
+        <tr>
+          <th> Names </th>
+          <th>Trips</th>
+          <th>Bonus</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% travel_data.each do |data| %>
+
+          <tr>
+            <td> <%= data ["Pilot"] %>  </td>
+            <td> <%= data ["Number_trips"] %> </td>
+            <td> <%= data ["Bonus"]%> </td>
+
+
+
+          </tr>
+<% end %>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  </body>
+</html>

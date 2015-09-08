@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.bender {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("http://i.imgur.com/2s4RVkF.png");
+}
+
+h1 {
+  color: #E1E4A9;
+  text-align: center;
+  padding: 5px 0px;
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.t1,
+.t2 {
+  padding: 5px;
+}
+
+table {
+  color: #E1E4A9;
+  font-family: sans-serif;
+  font-size: .9em;
+  font-weight: 300;
+  /* text-align: left; */
+
+  line-height: 40px;
+  border-spacing: 0;
+  border: 1px solid #842D35;
+  width: 500px;
+}
+
+thead tr:first-child {
+  background: rgba(158, 84, 28, 0.5);
+  color: #ddd;
+  border: 1px solid #000;
+}
+
+th {
+  font-weight: bold;
+  border: 1px solid #53535e;
+  text-align: center;
+}
+
+th:first-child,
+td:first-child {
+  padding: 0 15px 0 20px;
+}
+/*thead tr:last-child th {
+  border-bottom: 2px solid #ddd;
+border-right: 1px solid #ddd;
+}*/
+
+tbody tr:hover {
+  background-color: rgba(42, 42, 48, 0.9);
+  font-weight: 500;
+}
+/*tbody tr:last-child td {border: none;}*/
+
+tbody td {
+  border-bottom: 1px solid #3C3C48;
+  border: 1px solid #3C3C48;
+}
+
+tbody tr {
+  background: rgba(39, 39, 45, .9);
+}
+/*td:last-child {
+  text-align: right;
+  padding-right: 10px;
+  border-bottom: 1px solid #ddd;
+}*/
+
+body,
+a:hover {
+  cursor: url(http://cur.cursors-4u.net/cursors/cur-5/cur425.cur), progress !important;
+}

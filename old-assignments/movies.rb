@@ -27,15 +27,17 @@ movies << {
 }
 
 # movies with budgets less than 100
-budget_list = movies.select{ |budget|
-   (budget[:budget] < 100)
-}
+budget_list = movies.select{ |budget| (budget[:budget] < 100)}
+budget_list = budget_list.map{|explicit| (explicit [:title])}
 
 #movies with Leonardo DiCaprio as a star
-leonardo_mov = movies.map{|leo| (leo[:stars].include? "Leonardo DiCaprio")}
+leonardo_mov = movies.select{|leo| (leo[:stars].include? "Leonardo DiCaprio")}
+leonardo_mov = leonardo_mov.map {|specific| (specific [:title])}
 
-print movies.to_s
+puts "\n\n"
+print movies
 puts "\n\n"
 print budget_list
 puts "\n\n"
 print leonardo_mov
+puts "\n\n"
